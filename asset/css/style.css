@@ -1,0 +1,311 @@
+/* ================ IMPORT FONT ============== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwigley&family=Sacramento&display=swap');
+
+
+/* ================ RESET =================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================ VARIABLE ================ */
+
+:root {
+    --background-color: #130F19;
+    --background-header: #110b1b;
+    --background-header-hover: #5700a8;
+    --background-header-shadow: #2f1646;
+    --text-color: #ffffff;
+}
+
+/* ============== SETUP =============== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: auto;
+    font-family: "Helvetica";
+    background: var(--background-color);
+    height: auto;   
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background: var(--background-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3.5rem 0.5rem 8rem;
+    position: fixed;
+    width: 100%;
+    border: 1px solid #1c1c1d;
+    box-shadow: 0 2px 80px var(--background-header-shadow);
+    z-index: 20 
+}
+.titre {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    line-height: 0.8;
+}
+
+a img {
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.left h1 {
+    color: var(--text-color);
+}
+
+.left .trait1 {
+    height: 40px;
+    width: 2px;
+    background: rgb(177, 177, 177);
+}
+
+
+.left .bouton {
+    background: #1f1e1e;
+    border-radius: 15px;
+    height: 42px;
+    width:  140px;
+}
+
+.left .bouton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    height: 42px;
+    width:  140px;
+    border-radius: 15px;
+}
+
+.left .bouton a:active {
+    color: var(--text-color );
+}
+
+.left .bouton a:hover {
+    background: var(--background-header-hover);
+}
+
+/* ================= MAIN ================= */
+
+main {
+    height: auto;
+    padding: 10rem 4rem 5rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 1200px;
+    height: 150vh;
+}
+
+.pcarre, 
+.gcarre,
+.rect,
+.recti {
+    border: 1px solid white;
+    width: 100%;
+    border-radius: 10px;
+}
+    
+.pcarre {
+    grid-row: span 2 / span 2;
+    position: relative;
+    background-color: #391c68;;
+}
+
+.rect {
+    grid-row: span 2 / span 2;
+    grid-column: span 2 / span 2;
+    position: relative;
+    background-color: #300b3f;
+}
+
+.recti {
+    grid-row: span 4 / span 2;
+    position: relative;
+    background-color: #3c1f47;
+}
+
+.gcarre {
+    grid-row: span 4 / span 2;
+    grid-column: span 2 / span 2;
+    position: relative;
+    background-color: #470944;
+}
+
+.parent div img {   
+    display: none;
+}
+
+.parent div div p {
+    display: none;
+}
+
+.parent div:hover img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.parent div:hover div p {
+    display: block;
+}
+
+.parent div div{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    padding: .2rem .5rem;
+    width: 100%;
+}
+
+.parent div:hover div{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    padding: .2rem .5rem;
+    background-color: rgba(82, 82, 82, 0.5);
+    width: 100%;
+}
+
+/* ############# FOOTER ################ */
+
+footer div {
+    width: 100%;
+    height: 100px;
+    background-color:var(--background-header);
+    box-shadow: 0 -2px 80px var(--background-header-shadow);
+    display: flex;
+    padding-left: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer div h2 {
+    color: white;
+}
+
+footer div a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ############# MEDIA QUERY ################ */
+
+@media screen and (max-width:1024px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        max-width: 875px;
+        height: auto;
+    }
+
+    .pcarre {
+        grid-row: span 1 / span 1;
+        position: relative;
+        height: 282px;
+    }
+    
+    .rect {
+        grid-row: span 1 / span 1;
+        grid-column: span 1 /span 1;
+        position: relative; 
+        height: 282px;
+    }
+    
+    .recti {
+        grid-row: span 1 / span 2;
+        grid-column: span 2 /span 1;
+        position: relative;
+        height: 282px;
+    }
+    
+    .gcarre {
+        grid-row: span 2 / span 1;
+        grid-column: span 2 / span 1;
+        position: relative;
+        height: 575px;
+    }
+
+    .rectangle {
+        grid-row: span 1 / span 2;
+        grid-column: span 2 /span 1;
+        position: relative;
+        height: 282px;
+    }
+
+    }
+
+@media screen and (max-width:854px) {
+    .parent {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+            max-width: 500px;
+        }
+    
+    .pcarre {
+            grid-row: span 1 / span 1;
+            position: relative;
+            height: 250px;
+        }
+        
+    .rect {
+            grid-row: span 1 / span 1;
+            grid-column: span 1 /span 1;
+            position: relative;
+            height: 250px;
+        }
+        
+    .recti {
+            grid-row: span 1 / span 1;
+            grid-column: span 1 /span 1;
+            position: relative;
+            height: 250px;
+        }
+        
+    .gcarre {
+            grid-row: span 1 / span 1;
+            grid-column: span 1 / span 1;
+            position: relative;
+            height: 250px;
+        }
+    
+    .rectangle {
+            grid-row: span 1 / span 1;
+            grid-column: span 1 /span 1;
+            position: relative;
+            height: 250px;  
+        }
+    
+    }
