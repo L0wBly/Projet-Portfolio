@@ -126,7 +126,7 @@ main {
     gap: 8px;
     width: 100%;
     max-width: 1200px;
-    height: 145vh;
+    height: auto;
 }
 
 .pcarre, 
@@ -142,6 +142,7 @@ main {
     grid-row: span 2 / span 2;
     position: relative;
     background-color: var(--background-color-pcarre);
+    height: 277.5px;
 }
 
 .rect {
@@ -149,12 +150,14 @@ main {
     grid-column: span 2 / span 2;
     position: relative;
     background-color: var(--background-color-rect);
+    height: 277.5px;
 }
 
 .recti {
     grid-row: span 4 / span 2;
     position: relative;
     background-color: var(--background-color-recti);
+    height: 562.5px;
 }
 
 .gcarre {
@@ -162,6 +165,7 @@ main {
     grid-column: span 2 / span 2;
     position: relative;
     background-color: var(--background-color-gcarre);
+    height: 563px;
 }
 
 .parent div img {   
