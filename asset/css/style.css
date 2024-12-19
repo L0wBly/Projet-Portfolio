@@ -126,7 +126,7 @@ main {
     gap: 8px;
     width: 100%;
     max-width: 1200px;
-    height: 150vh;
+    height: 145vh;
 }
 
 .pcarre, 
@@ -302,35 +302,35 @@ footer div h3 {
     .pcarre {
             grid-row: span 1 / span 1;
             position: relative;
-            height: 250px;
+            height: 500px;
         }
         
     .rect {
             grid-row: span 1 / span 1;
             grid-column: span 1 /span 1;
             position: relative;
-            height: 250px;
+            height: 500px;
         }
         
     .recti {
             grid-row: span 1 / span 1;
             grid-column: span 1 /span 1;
             position: relative;
-            height: 250px;
+            height: 500px;
         }
         
     .gcarre {
             grid-row: span 1 / span 1;
             grid-column: span 1 / span 1;
             position: relative;
-            height: 250px;
+            height: 500px;
         }
     
     .rectangle {
             grid-row: span 1 / span 1;
             grid-column: span 1 /span 1;
             position: relative;
-            height: 250px;  
+            height: 500px;
         }
     
     }
